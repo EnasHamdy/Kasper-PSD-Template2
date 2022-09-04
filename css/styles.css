@@ -28,12 +28,17 @@ ul {
 }
 /* For any container to center it */
 .container {
-  padding-right: 25px;
-  padding-left: 25px;
+  padding-right: 15px;
+  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
 /* Special settings for .container at different screens */
+@media (min-width: 576px) {
+  .container {
+    width: 570px;
+  }
+}
 /* Small */
 @media (min-width: 768px) {
   .container {
@@ -305,27 +310,29 @@ header .search i {
   padding-bottom: var(--sectionPadding);
 }
 /* Services Contents */
-.services .serv-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 50px;
+@media (min-width: 768px){
+  .services .serv-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 50px;
+  }
 }
 /* Styling each Service */
 .services .serv-content .serv {
   display: flex;
-  justify-content: space-between;
+}
+.services .serv-content .serv i {
+  margin-right: 50px;
 }
 @media (max-width: 767px) {
   .services .serv-content .serv {
     flex-direction: column;
     text-align: center;
+    margin-bottom: 40px;
   }
-}
-.services .serv-content .serv i {
-  flex-basis: 100px;
-}
-.services .serv-content .serv .serv-descrip {
-  flex: 1;
+  .services .serv-content .serv i {
+    margin: 0 0 30px;
+  }
 }
 .services .serv-content .serv .serv-descrip h4 {
   font-size: 24px;
@@ -415,6 +422,17 @@ header .search i {
   text-transform: uppercase;
   text-decoration: none;
   font-size: 18px;
+}
+@media (max-width: 767px) {
+  .portfolio nav ul {
+    margin-bottom: 15px;
+  }
+  .portfolio nav ul li {
+    padding: 5px 10px;
+  }
+  .portfolio nav ul li a {
+    font-size: 14px;
+  }
 }
 /* End Menu */
 /* Start Images */
@@ -548,6 +566,12 @@ header .search i {
   margin-top: -120px;
   position: relative;
   bottom: -120px;
+}
+@media (max-width: 767px) {
+  .about .about-img {
+    margin-top: -60px;
+    bottom: -100px;
+  }
 }
 /* Statistic */
 .about .statics {
@@ -757,6 +781,11 @@ header .search i {
   font-size: 30px;
   font-weight: 600;
   text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .about .quote .container q {
+    font-size: 22px;
+  }
 }
 .about .quote .container p {
   text-transform: capitalize;
